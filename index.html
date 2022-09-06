@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DaniMartinez Instagram Clone</title>
+    <script defer src="scripts.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <script src="https://kit.fontawesome.com/27c5d7f0db.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&family=Quicksand:wght@300&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="avatar-container">
+                <img class="avatar" src="https://picsum.photos/id/236/200" alt="Avatar" />
+                <div class="user-info">
+                    <p class="user-name"><b>Katie Mill</b></p>
+                    <p class="user-location">New York, New York</p>
+                </div>
+            </div>
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"> <img class="carousel-img" src="https://picsum.photos/id/238/526/300"
+                            alt="new york" />
+                    </div>
+                    <div class="swiper-slide"> <img class="carousel-img" src="https://picsum.photos/id/239/526/300"
+                            alt="new york" />
+                    </div>
+                    <div class="swiper-slide"> <img class="carousel-img" src="https://picsum.photos/id/237/526/300"
+                            alt="new york" />
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+            <div class="icons">
+                <div class="icon-div">
+                    <button><img src="assets/heart.svg" id="heartid" width="28px" alt="like"></button>
+                    <button><img src="assets/comment.svg" class="filter-black" width="30px" alt="comment"></button>
+                    <button><img src="assets/send.svg" class="filter-black" width="22px" alt="send"></button>
+                </div>
+                <div class="icon-div-save">
+                    <button><img src="assets/save.svg" width="30px" alt="save"></button>
+                </div>
+
+            </div>
+            <div class="post-caption">
+                <p><b>Katie Mill</b> Wonderful weeknd in NY</p>
+            </div>
+            <div class="comment-section" id="post-caption">
+                <div id="comments"></div>
+            </div>
+            <form method="GET" class="comments-form" id="form">
+                <input id="comment" name="comment" class="input" type="text">
+                </input>
+                <button id="button" class="post" type="click" onClick="addComments()">Post</button>
+            </form>
+
+        </div>
+    </div>
+    <!-- swiper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script>const swiper = new Swiper('.swiper', {
+            // Optional parameters
+            direction: 'horizontal',
+            loop: true,
+
+            // If we need pagination
+            pagination: {
+                el: '.swiper-pagination',
+            },
+
+            // Navigation arrows
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+
+            // And if we need scrollbar
+            scrollbar: {
+                el: '.swiper-scrollbar',
+            },
+        });</script>
+
+</body>
+
+</html>
